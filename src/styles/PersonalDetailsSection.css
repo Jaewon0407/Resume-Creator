@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial
+}
+
+.personal-info {
+    max-height: 500px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 25px 15px;
+    box-shadow: 0 0 10px  rgba(0, 0, 0, 0.1);
+}
+
+.personal-info .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.personal-info .info {
+    margin-top: 20px;
+}
+
+.personal-info .info input {
+    background-color: rgba(228, 228, 228, 0.465);
+    font-size: .85rem;
+    margin-top: 5px;
+    padding: 15px 0;
+    padding-right: 250px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.personal-info .info .text {
+    display: flex;
+    align-items: center;
+}
+
+.personal-info .info .text p {
+    font-size: .85rem;
+    font-weight: 500;
+}
+
+.personal-info .info .text .recommended {
+    font-size: .6rem;
+    margin-left: 10px;
+    color: rgba(75, 75, 75, 0.677);
+}
