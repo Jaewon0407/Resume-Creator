@@ -5,7 +5,9 @@ function PersonalDetailsSection({}) {
         <div className='personal-info'>
             <p className='title'>Personal Details</p>
             <div className='info fullname'>
-                <p>Full name</p>
+                <div className='text'>
+                    <p>Full name</p>
+                </div>
                 <input type="text" placeholder='First and last name'/>
             </div>
             <div className='info email'>

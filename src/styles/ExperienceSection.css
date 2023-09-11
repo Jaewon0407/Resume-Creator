@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial
+}
+
+.experience-info {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 8px;
+    padding: 25px 15px;
+    box-shadow: 0 0 10px  rgba(0, 0, 0, 0.1);   
+    width: 500px;
+}
+
+.experience-info .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.experience-info .info {
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.experience-info .info input {
+    background-color: rgba(228, 228, 228, 0.465);
+    font-size: .85rem;
+    margin-top: 5px;
+    padding: 15px 0;
+    width: 100%;
+    padding-left: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.experience-info .description input {
+    padding-bottom: 50px;
+}
+
+.experience-info .info .text {
+    display: flex;
+    align-items: center;
+}
+
+.experience-info .info .text p {
+    font-size: .85rem;
+    font-weight: 500;
+}
+
+.experience-info .buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.experience-info .buttons .delete {
+    box-shadow: 0 0 10px  rgba(0, 0, 0, 0.35);
+    color: rgba(75, 75, 75, 0.677);
+    cursor: pointer;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.experience-info .buttons .save-cancel {
+    display: flex;
+}
+
+.experience-info .buttons .save-cancel .save,
+.experience-info .buttons .save-cancel .cancel {
+    margin-left: 10px;
+    color: rgba(75, 75, 75, 0.677);
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 10px  rgba(0, 0, 0, 0.35);
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.experience-info .buttons .save-cancel .save {
+    color: white;
+    background-color: rgb(156, 156, 234);
+}
+
+.experience-info .buttons {
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.experience-info .buttons .delete {
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.35);
+    color: rgba(75, 75, 75, 0.677);
+    cursor: pointer;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.experience-info .buttons .delete:active {
+    box-shadow: none;
+}
+
+.experience-info .buttons .save-cancel {
+    display: flex;
+}
+
+.experience-info .buttons .save-cancel .save,
+.experience-info .buttons .save-cancel .cancel {
+    margin-left: 10px;
+    color: rgba(75, 75, 75, 0.677);
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 0.35);
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.experience-info .buttons .save-cancel .save {
+    color: white;
+    background-color: rgb(156, 156, 234);
+}
+
+.experience-info .buttons .save-cancel .save:active,
+.experience-info .buttons .save-cancel .cancel:active {
+    box-shadow: none;
+}
+
