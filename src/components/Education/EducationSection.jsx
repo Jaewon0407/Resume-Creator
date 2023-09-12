@@ -1,7 +1,7 @@
 import '../../styles/EducationSection.css'
 import {useState} from 'react'
 
-function EducationSection ({ onSaveEducation }) {
+function EducationSection (props) {
 
     const [school, setSchool] = useState('')
     const [degree, setDegree] = useState('')
@@ -38,9 +38,8 @@ function EducationSection ({ onSaveEducation }) {
             endDate,
             location
         }
-        
-        console.log(newEducation)
-        onSaveEducation(newEducation)
+
+        props.handleSaveEducation(newEducation)
 
         // Clear the input fields
         setSchool('')
@@ -51,6 +50,30 @@ function EducationSection ({ onSaveEducation }) {
 
     }
 
+    const handleCancelClick = () => {
+        setSchool('')
+        setDegree('')
+        setStartDate('')
+        setEndDate('')
+        setLocation('')   
+    }
+
+    const handleDeleteClick = () => {
+        setSchool('')
+        setDegree('')
+        setStartDate('')
+        setEndDate('')
+        setLocation('')
+
+        props.handleSaveEducation({
+            school: '',
+            degree: '',
+            startDate: '',
+            endDate: '',
+            location: ''   
+        })
+    }
+    
     return (
         <div className='education-info'>
             <p className='title'>Education</p>
@@ -85,9 +108,9 @@ function EducationSection ({ onSaveEducation }) {
                 <input type="text" placeholder='Enter Location' value={location} onChange={handleLocationChange} />
             </div>
             <div className='buttons'>
-                <div className='delete'>Delete</div>
+                <div className='delete' onClick={handleDeleteClick}>Delete</div>
                 <div className='save-cancel'>
-                    <div className='cancel'>Cancel</div>
+                    <div className='cancel' onClick={handleCancelClick}>Cancel</div>
                     <div className='save' onClick={handleSaveClick}>Save</div>
                 </div>
             </div>

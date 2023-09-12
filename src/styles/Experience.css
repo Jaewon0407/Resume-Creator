@@ -1,0 +1,30 @@
+.experience .content {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.experience .content:hover {
+    background-color: rgba(128, 128, 128, 0.316);
+}
+
+.experience .content .date-location {
+    margin-right: 30px;
+}
+
+.experience .content .date-location .date {
+    display: flex;
+    flex-direction: row;
+}
+
+.experience .content .company-position-description .company {
+    font-weight: 600;
+}
+
+.experience .content .company-position-description .description {
+    margin-top: 5px;
+    font-size: .85rem;
+}

@@ -1,32 +1,22 @@
 import '../styles/Resume.css'
+import Education from './resume/Education.jsx'
+import PersonalDetails from './resume/PersonalDetails'
+import Experience from './resume/Experience.jsx'
 
-function Resume ({ newEducationData }) {
-    
+function Resume ({ educationData, personalDetailsData, experienceData }) {
+
     return (
         <div className='resume-container'>
-            <div className='header'>
-                <p className='full-name'>Jaewon Han</p>
-                <div className='info-container'>
-                    <p className='email'>jaewon.h4@gmail.com</p>
-                    <p className='phone-number'>778-951-1261</p>
-                    <p className='location'>Surrey, BC</p>
-                </div>
-            </div>
+            <PersonalDetails personalDetailsData={personalDetailsData} />
             <div className='body'>
-                <div className='education'>
-                    <div className='title'>Education</div>
-                    <div className='content'>
-                        <div className='date-location'>
-                            <p className='date'>08/2020 - present</p>
-                            <p className='location'>New York City, US</p>
-                        </div>
-                        <div className='school-major'>
-                            <p className='school'>London City University</p>
-                            <p className='major'>Bachelors in Economics</p>
-                        </div>
-                    </div>
+                <div className="education">
+                    <div className="title">Education</div>
+                    <Education educationData={educationData} />
                 </div>
-                <div className='experience'></div>
+                <div className='experience'>
+                    <div className="title">Experience</div>
+                    <Experience experienceData={experienceData} />
+                </div>
             </div>
         </div>
     )

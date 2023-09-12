@@ -8,25 +8,47 @@ import './styles/App.css'
 function App() {
 
   const [educationData, setEducationData] = useState('')
+  const [personalDetailsData, setPersonalDetailsData] = useState('')
+  const [experienceData, setExperienceData] = useState([])
 
   const handleSaveEducation = (newEducation) => {
     setEducationData(newEducation)
+  }
+
+  const handleSavePersonalDetails = (newPersonalDetails) => {
+    setPersonalDetailsData(newPersonalDetails)
+  }
+
+  const handleSaveExperience = (newExperience) => {
+    setExperienceData([...experienceData, newExperience])
+  }
+
+  const handleUpdateExperience = (updatedExperience) => {
+    setExperienceData(updatedExperience)
   }
 
   return (
     <div className='app'>
         <div className='details'>
             <div className='section personal-details'>
-                <PersonalDetailsSection />
+                <PersonalDetailsSection handleSavePersonalDetails={handleSavePersonalDetails} />
             </div>
             <div className='section education-details'>
-                <EducationSection onSaveEducation={handleSaveEducation} />
+                <EducationSection handleSaveEducation={handleSaveEducation} />
             </div>
             <div className='section experience-details'>
-                <ExperienceSection />
+                <ExperienceSection 
+                  handleSaveExperience={handleSaveExperience} 
+                  handleUpdateExperience={handleUpdateExperience}
+                  experienceData={experienceData}
+                />
             </div>
         </div>
-      <Resume educationData={educationData} />
+      <Resume 
+        educationData={educationData} 
+        personalDetailsData={personalDetailsData}
+        experienceData={experienceData}
+      />
     </div>
   );
 }

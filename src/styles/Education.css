@@ -1,0 +1,14 @@
+.education .content {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    font-size: .9rem;
+}
+
+.education .content .date-location {
+    margin-right: 30px;
+}
+
+.education .content .school-major .school {
+    font-weight: 600;
+}
